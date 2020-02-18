@@ -1,0 +1,8 @@
+ansible_ssh_port: 22
+ansible_ssh_user: vagrant
+ansible_ssh_password: mestre
+ansible_become: yes
+ansible_become_method: sudo
+ansible_become_user: root
+ansible_become_password: mestre
+ansible_connection: ssh

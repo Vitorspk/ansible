@@ -1,0 +1,9 @@
+[servidores_web]
+www ansible_ssh_host=192.168.33.10
+
+[servidores_db]
+mysql ansible_ssh_host=192.168.33.11
+
+[servidores:children]
+servidores_web
+servidores_db
