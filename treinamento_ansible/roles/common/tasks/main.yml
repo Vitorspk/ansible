@@ -25,4 +25,6 @@
 - name: Copiando arquivo de backup
   copy: src=backup.tar.xz dest=/tmp/backup.tar.xz
 
+- name: Copiando um template
+  template: src=motd dest=/etc/motd force=yes owner=root group=root 
 ...
