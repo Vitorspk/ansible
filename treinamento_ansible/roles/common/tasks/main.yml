@@ -26,5 +26,10 @@
   copy: src=backup.tar.xz dest=/tmp/backup.tar.xz
 
 - name: Copiando um template
-  template: src=motd dest=/etc/motd force=yes owner=root group=root 
+  template: src=motd dest=/etc/motd force=yes owner=root group=root
+
+# instação do NGINX
+- name: Instalacao do nginx
+  apt: name=nginx state=latest
+  notify: Reload systemd
 ...
