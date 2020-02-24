@@ -1,4 +1,4 @@
 .vagrant
 vagrant_ubuntu_*/.vagrant
 treinamento_ansible/roles/common/files/backup.tar.xz
-setup.txt
+setup.yaml
