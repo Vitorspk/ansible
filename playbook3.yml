@@ -1,0 +1,30 @@
+---
+
+- hosts: www
+  remote_user: vagrant
+  become: yes
+  become_user: root
+  order: sorted
+  tasks:
+  - name: Remoção de pacotes
+    apt:
+      name: "{{ packages }}"
+      state: absent
+    vars:
+      packages:
+        - nginx
+        - httpd
+  - name: Instalacao de pacotes
+    apt:
+      name: "{{ packages }}"
+      state: latest
+    vars:
+      packages:
+        - nmap
+        - nginx
+        - vim
+        - tcpdump
+
+
+
+...
